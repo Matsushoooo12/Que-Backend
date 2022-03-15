@@ -65,3 +65,6 @@ gem 'rails_admin'
 
 # envファイル
 gem "dotenv-rails"
+
+# HTTP通信
+gem 'rack-cors'
