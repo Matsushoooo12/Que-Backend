@@ -1,24 +1,20 @@
-# README
+# Que-Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Heroku デプロイ　仕様
 
-Things you may want to cover:
+## デプロイ
 
-* Ruby version
+```
+$ git push heroku master
+```
 
-* System dependencies
+## データベース反映
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+<!-- テーブル作成 -->
+$ heroku run rails db:migrate
+<!-- サーバー停止 -->
+heroku ps:scale web=0
+<!-- サーバー起動 -->
+heroku ps:scale web=1
+```
