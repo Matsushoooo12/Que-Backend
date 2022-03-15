@@ -57,3 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # rails_admin
 gem 'rails_admin'
+
+# envファイル
+gem "dotenv-rails"
