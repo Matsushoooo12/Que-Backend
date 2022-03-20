@@ -1,4 +1,5 @@
 class Api::V1::PostsController < ApplicationController
+    protect_from_forgery
     def index
         posts = Post.all.order(created_at: :desc)
         render json: posts
@@ -35,6 +36,6 @@ class Api::V1::PostsController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:content)
+        params.require(:post).permit(:title)
     end
 end
